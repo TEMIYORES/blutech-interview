@@ -1,6 +1,20 @@
+import { useState } from "react";
+import useSearch from "../hooks/useSearch";
+
 type Props = {};
 
 const SearchInput = (props: Props) => {
+  const [searchInput, setSearchInput] = useState("");
+  const { refetch } = useSearch(searchInput);
+
+  // Function to be executed when Enter key is pressed
+  const handleSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      // Run the function here
+      refetch();
+      // You can call any function you want here
+    }
+  };
   return (
     <div className="search-input">
       <svg
@@ -18,7 +32,14 @@ const SearchInput = (props: Props) => {
         />
       </svg>
 
-      <input type="text" className="" placeholder="Search by patients..." />
+      <input
+        type="text"
+        className=""
+        placeholder="Search by patients..."
+        value={searchInput}
+        onKeyDown={handleSearch}
+        onChange={(e) => setSearchInput(e.target.value)}
+      />
     </div>
   );
 };

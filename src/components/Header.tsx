@@ -18,14 +18,14 @@ const Header = (props: Props) => {
           </div>
           <SearchInput />
           <div className="col-span-2 flex gap-4 justify-end items-center">
-            <div className="overflow-hidden w-[34px]">
+            <div className="overflow-hidden w-[34px] cursor-pointer">
               <img src={notification} />
             </div>
-            <div className="overflow-hidden w-[34px] rounded-full">
+            <div className="overflow-hidden w-[34px] cursor-pointer rounded-full">
               <img src={profile} />
             </div>
             <p>Deku</p>
-            <div className="overflow-hidden w-[10px]">
+            <div className="overflow-hidden w-[10px] cursor-pointer">
               <img src={arrowdown} />
             </div>
           </div>
