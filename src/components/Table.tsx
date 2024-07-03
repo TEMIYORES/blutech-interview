@@ -1,15 +1,25 @@
 import TableHeader from "./TableHeader";
+import Lottie from "lottie-react";
+import Loader from "../assets/loader.json";
 import useCosmeticsList from "../hooks/useCosmeticsList";
 type Props = {};
 
 const Table = (props: Props) => {
   const { cosmeticsList, isLoading } = useCosmeticsList();
-  console.log({ cosmeticsList });
   return (
     <div className="mt-5">
       <TableHeader />
       <div className="mt-4 bg-headerbg rounded-md">
         <div className="px-2 py-2">
+          {isLoading ? (
+            <div className="w-full flex justify-center">
+              <Lottie
+                animationData={Loader}
+                loop={true}
+                style={{ width: "100px" }}
+              />
+            </div>
+          ) : null}
           {cosmeticsList &&
             cosmeticsList?.map((cosmeticListItem, index) => (
               <div
@@ -21,7 +31,7 @@ const Table = (props: Props) => {
                     <input type="checkbox" className="flex gap-2" />
                     <p className="">{index + 1}.</p>
                   </div>
-                  <div className="overflow-hidden w-10">
+                  <div className="overflow-hidden w-12">
                     <img src={cosmeticListItem.Image_1} />
                   </div>
                   <p className="">{cosmeticListItem.SKU}</p>

@@ -1,30 +1,87 @@
-# React + TypeScript + Vite
+# Vite React TypeScript + TailwindCSS Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a template for setting up a React application with TypeScript, Vite, and TailwindCSS. It provides a fast development environment and a clean structure for building modern web applications.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Building for Production](#building-for-production)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get started with this project, clone the repository and install the dependencies:
 
-- Configure the top-level `parserOptions` property like this:
+### Clone the Repository
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+git clone https://github.com/TEMIYORES/blutech-interview.git
+
+cd blutech-interview
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Installation
+
+Make sure you have Node.js installed. Then, install the required dependencies using npm or yarn:
+
+```sh
+# Using npm
+npm install
+
+# Using yarn
+yarn install
+```
+
+## Running the Project
+
+To start the development server, use the following command:
+
+```sh
+# Using npm
+npm run dev
+
+# Using yarn
+yarn dev
+```
+
+This will start the Vite development server and open the application in your default web browser. Any changes you make to the code will be automatically reflected in the browser.
+
+## Building for Production
+
+To create a production build of the project, use the following command:
+
+```sh
+# Using npm
+npm run build
+
+# Using yarn
+yarn build
+```
+
+This will generate optimized static files in the 'dist' directory. You can serve these files using any static file server.
+
+```sh
+blutech-interview/
+├── public/             # Static assets
+├── src/                # Source code
+│   ├── assets/         # Asset files (images, fonts, etc.)
+│   ├── components/     # React components
+│   ├── config/         # React Configurations
+│   ├── context/        # Context Api Configuration
+│   ├── hooks/          # Context api hooks
+│   ├── App.tsx         # Root component
+│   ├── main.tsx        # Entry point
+│   └── index.css/      # CSS and TailwindCSS styles
+├── .gitignore          # Git ignore file
+├── index.html          # HTML template
+├── package.json        # Project dependencies and scripts
+├── postcss.config.js   # PostCSS configuration
+├── README.md           # Project README
+├── tailwind.config.js  # TailwindCSS configuration
+├── tsconfig.json       # TypeScript configuration
+├── vite.config.ts      # Vite configuration
+
+```
+
+## Happy Coding! 🥳 #blutech
