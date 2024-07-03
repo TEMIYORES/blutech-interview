@@ -1,10 +1,10 @@
 import TableHeader from "./TableHeader";
 import Lottie from "lottie-react";
 import Loader from "../assets/loader.json";
-import useCosmeticsList from "../hooks/useCosmeticsList";
+import { useCosmeticsContext } from "../context/CosmeticsContext";
 
 const Table = () => {
-  const { cosmeticsList, isLoading } = useCosmeticsList();
+  const { data: cosmeticsList, isLoading } = useCosmeticsContext();
   return (
     <div className="mt-5">
       <TableHeader />

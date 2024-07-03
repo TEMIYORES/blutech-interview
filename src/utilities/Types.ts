@@ -1,18 +1,24 @@
 export interface CosmeticsListType {
-    SKU: number
-    Name: string
-    Description: string
-    Brand: string
-    Title: string
-    Gender: string
-    RETAIL: any
-    "Cost Price": number
-    Image_1: string
-    URL: string
-    Quantity: number
-    size: string
-    UPC: any
-    catalog_time: string
-    supplier: string
-  }
-  
+  SKU: number;
+  Name: string;
+  Description: string;
+  Brand: string;
+  Title: string;
+  Gender: string;
+  RETAIL: any;
+  "Cost Price": number;
+  Image_1: string;
+  URL: string;
+  Quantity: number;
+  size: string;
+  UPC: any;
+  catalog_time: string;
+  supplier: string;
+}
+
+export interface CosmeticsContextType {
+  data: CosmeticsListType[] | undefined;
+  isError: boolean;
+  error: unknown;
+  isLoading: boolean;
+}
