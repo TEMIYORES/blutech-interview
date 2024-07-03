@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+ul.sessioncolumn li:last-child {
+  border: none;
+}
+.basic-input:-webkit-autofill,
+.basic-input:-webkit-autofill:hover,
+.basic-input:-webkit-autofill:focus,
+.basic-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #262626 inset !important; /* Adjust the background color */
+  -webkit-text-fill-color: #d4d4d4 !important; /* Adjust the text color */
+}
+
+.basic-input {
+  @apply w-full mt-2 px-3 py-2 text-desccolor bg-transparent outline-none border border-desccolor focus:border-hover shadow-sm rounded-lg transition duration-300 disabled:text-desccolor placeholder:text-desccolor;
+}
+.search-input {
+  @apply flex gap-2 w-fit justify-start pl-3 pr-10 py-2 text-desccolor bg-transparent outline-none border border-inputborder focus:border-hover rounded-lg transition duration-300 disabled:text-inputborder;
+}
+.search-input input {
+  @apply outline-none placeholder:text-desccolor;
+}
+.input-label {
+  @apply text-sm text-desccolor font-bold;
+}
+.basic-button {
+  @apply px-4 py-2 text-sm text-inputborder font-medium rounded-lg bg-primary hover:bg-hover hover:shadow-xl transition duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed;
+}
