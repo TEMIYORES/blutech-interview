@@ -1,13 +1,13 @@
 # Vite React TypeScript + TailwindCSS Project
 
-This project is a template for setting up a React application with TypeScript, Vite, and TailwindCSS. It provides a fast development environment and a clean structure for building modern web applications.
+This project is a template for setting up this particular React application with TypeScript, Vite, and TailwindCSS. It provides a fast development environment and a clean structure for building modern web applications.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
 - [Building for Production](#building-for-production)
-- [License](#license)
+
 
 ## Installation
 

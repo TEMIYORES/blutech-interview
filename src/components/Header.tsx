@@ -1,4 +1,3 @@
-import Continer from "./HeadContainer";
 import logo from "../assets/img/logo.png";
 import SearchInput from "./SearchInput";
 import notification from "../assets/img/notification.png";
@@ -6,9 +5,7 @@ import profile from "../assets/img/profile.png";
 import arrowdown from "../assets/img/arrow-down.png";
 import HeadContainer from "./HeadContainer";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <div className="bg-headerbg">
       <HeadContainer>

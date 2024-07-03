@@ -1,6 +1,4 @@
-type Props = {};
-
-const TableHeader = (props: Props) => {
+const TableHeader = () => {
   return (
     <div className="bg-tableheaderbg rounded-md">
       <div className="p-2">

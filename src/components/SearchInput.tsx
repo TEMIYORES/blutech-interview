@@ -1,9 +1,7 @@
 import { useState } from "react";
 import useSearch from "../hooks/useSearch";
 
-type Props = {};
-
-const SearchInput = (props: Props) => {
+const SearchInput = () => {
   const [searchInput, setSearchInput] = useState("");
   const { refetch } = useSearch(searchInput);
 
