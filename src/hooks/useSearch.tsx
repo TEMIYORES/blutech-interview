@@ -26,7 +26,6 @@ const useSearch = (
         `${API_URL}/products/public/catalog?supplier=FragranceX&search=${search}`
       ).then((response) => response.json()),
     onSuccess: (data) => {
-      console.log({ data });
       queryClient.setQueryData("dataList", data);
     },
     refetchOnWindowFocus: false,
