@@ -20,18 +20,10 @@ ul.sessioncolumn li:last-child {
   -webkit-text-fill-color: #d4d4d4 !important; /* Adjust the text color */
 }
 
-.basic-input {
-  @apply w-full mt-2 px-3 py-2 text-desccolor bg-transparent outline-none border border-desccolor focus:border-hover shadow-sm rounded-lg transition duration-300 disabled:text-desccolor placeholder:text-desccolor;
-}
 .search-input {
-  @apply flex gap-2 w-fit justify-start pl-3 pr-10 py-2 text-desccolor bg-transparent outline-none border border-inputborder focus:border-hover rounded-lg transition duration-300 disabled:text-inputborder;
+  @apply flex gap-2 w-fit justify-start pl-3 pr-10 py-2 text-textcolor bg-transparent outline-none border border-inputborder focus:border-headercolor rounded-lg transition duration-300 disabled:text-inputborder;
 }
+
 .search-input input {
-  @apply outline-none placeholder:text-desccolor;
-}
-.input-label {
-  @apply text-sm text-desccolor font-bold;
-}
-.basic-button {
-  @apply px-4 py-2 text-sm text-inputborder font-medium rounded-lg bg-primary hover:bg-hover hover:shadow-xl transition duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed;
+  @apply outline-none placeholder:text-desccolor border-none p-0 m-0;
 }

@@ -17,17 +17,13 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#4f46e5",
         textcolor: "#262626",
         headercolor: "#595959",
         tableheaderbg: "#F0F4FE",
         inputborder: "#cdcdcd",
         desccolor: "#737373",
-        bg: "#171717",
-        navbg: "#737373",
         bodybg: "#fefefe",
         headerbg: "#fff",
-        hover: "#4338ca",
       },
     },
   },

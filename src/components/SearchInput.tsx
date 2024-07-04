@@ -1,27 +1,38 @@
 import { useState } from "react";
 import useSearch from "../hooks/useSearch";
 
-const SearchInput = () => {
-  const [searchInput, setSearchInput] = useState("");
-  const { refetch } = useSearch(searchInput);
+/**
+ * SearchInput component for searching data.
+ *
+ * This component provides an input field for search functionality. It triggers a search
+ * operation when the Enter key is pressed.
+ *
+ * @returns {JSX.Element} The rendered search input component.
+ */
+const SearchInput = (): JSX.Element => {
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const { refetch } = useSearch(searchQuery);
 
-  // Function to be executed when Enter key is pressed
+  /**
+   * Handles the keydown event for the search input field.
+   *
+   * @param {React.KeyboardEvent<HTMLInputElement>} event - The keyboard event.
+   */
   const handleSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      // Run the function here
       refetch();
-      // You can call any function you want here
     }
   };
+
   return (
-    <div className="search-input">
+    <div className="search-input flex items-center gap-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-6"
+        className="w-6 h-6"
       >
         <path
           strokeLinecap="round"
@@ -29,14 +40,13 @@ const SearchInput = () => {
           d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
         />
       </svg>
-
       <input
         type="text"
-        className=""
+        className="border p-2 rounded"
         placeholder="Search by patients..."
-        value={searchInput}
+        value={searchQuery}
         onKeyDown={handleSearch}
-        onChange={(e) => setSearchInput(e.target.value)}
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
     </div>
   );

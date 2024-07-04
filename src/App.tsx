@@ -1,14 +1,14 @@
 import Body from "./components/Body";
 import Header from "./components/Header";
-import CosmeticsContextProvider from "./context/CosmeticsContextProvider";
+import DataContextProvider from "./context/ApiContextProvider";
 
 const App = () => {
   return (
     <div>
-      <CosmeticsContextProvider>
+      <DataContextProvider>
         <Header />
         <Body />
-      </CosmeticsContextProvider>
+      </DataContextProvider>
     </div>
   );
 };

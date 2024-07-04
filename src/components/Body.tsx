@@ -1,7 +1,14 @@
 import BodyContainer from "./BodyContainer";
 import Table from "./Table";
 
-const Body = () => {
+/**
+ * Body component that serves as the main content area.
+ *
+ * This component includes a heading and the Table component wrapped inside the BodyContainer.
+ *
+ * @returns {JSX.Element} The rendered body component.
+ */
+const Body = (): JSX.Element => {
   return (
     <div>
       <BodyContainer>

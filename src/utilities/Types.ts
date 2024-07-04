@@ -1,4 +1,6 @@
-export interface CosmeticsListType {
+import { SetStateAction } from "react";
+
+export interface DataListType {
   SKU: number;
   Name: string;
   Description: string;
@@ -16,9 +18,11 @@ export interface CosmeticsListType {
   supplier: string;
 }
 
-export interface CosmeticsContextType {
-  data: CosmeticsListType[] | undefined;
+export interface ApiContextType {
+  data: DataListType[] | undefined;
   isError: boolean;
   error: unknown;
   isLoading: boolean;
+  selectAll: boolean;
+  setSelectAll: React.Dispatch<SetStateAction<boolean>>;
 }
